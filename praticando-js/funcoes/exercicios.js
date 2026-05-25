@@ -210,3 +210,16 @@ processarPedido("Carlos", "vip", mensagemPersonalizada);
 // Sua tarefa é criar uma função chamada responderUsuario, que receba dois parâmetros:
 // o nome do usuário, e
 // uma função de callback que será executada após 3 segundos.
+
+function responderUsuario(userName, callback) {
+  console.log("Processando sua pergunta...");
+  setTimeout(() => {
+    callback(userName);
+  }, 3000);
+}
+
+function mostrarResposta(userName) {
+  console.log(`Olá, ${userName}! Aqui está a resposta para sua dúvida.`);
+}
+
+responderUsuario("Camila", mostrarResposta);
